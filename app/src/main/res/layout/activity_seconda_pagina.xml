@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sfondo"
+    app:layoutDescription="@xml/activity_seconda_pagina_scene"
+    tools:context=".secondaPagina">
+
+
+    <Button
+        android:id="@+id/btnTorna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:minHeight="48dp"
+        android:text="Torna al Login"
+        app:layout_constraintBottom_toTopOf="@+id/btnArchivio"
+        app:layout_constraintEnd_toStartOf="@+id/btnAggiungi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnAggiungi"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sfondo"
+        android:backgroundTint="@color/colorePrimarioScuro"
+        android:backgroundTintMode="add"
+        android:minHeight="48dp"
+        android:text="+"
+        app:iconTint="@color/coloreAccent"
+        app:layout_constraintBottom_toBottomOf="@+id/btnTorna"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toEndOf="@+id/btnTorna"
+        app:layout_constraintTop_toTopOf="@+id/btnTorna"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnArchivio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="690dp"
+        android:text="Archivio utenti eliminati"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTorna" />
+
+    <ScrollView
+        android:id="@+id/scvListaUtenti"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/btnArchivio"
+        android:scrollbarStyle="outsideInset"
+        android:verticalScrollbarPosition="defaultPosition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnArchivio">
+
+        <LinearLayout
+            android:id="@+id/layouLineare"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sfondo"
+    tools:context=".ModificaContatto">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnApplica"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Applica le modifiche"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnBackMod"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnBackMod"
+                    app:layout_constraintTop_toTopOf="@+id/btnBackMod"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <Button
+                    android:id="@+id/btnBackMod"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="54dp"
+                    android:layout_marginBottom="60dp"
+                    android:text="indietro"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnApplica"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ScrollView" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:paddingHorizontal="18dp"
+                    android:text="* CAMPI OBBLIGATORI"
+                    android:textAlignment="center"
+                    android:textColor="@color/rossoERRORE"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnApplica" />
+
+                <TextView
+                    android:id="@+id/txtNomeModifica"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="11dp"
+                    android:paddingHorizontal="20dp"
+                    android:text="TextView"
+                    app:layout_constraintBottom_toTopOf="@+id/txtIdModifca"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtIdModifca"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="60dp"
+                    android:paddingHorizontal="20dp"
+                    android:text="TextView"
+                    app:layout_constraintBottom_toTopOf="@+id/ScrollView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtNomeModifica" />
+
+                <ScrollView
+                    android:id="@+id/ScrollView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/textView6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/LlListaMod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/txtCodiceFiscale"
+                            android:singleLine="true"
+                            style="@style/Widget.AppCompat.AutoCompleteTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Codice fiscale*"
+                            android:text=""
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/coloreAccent" />
+
+                        <EditText
+                            android:id="@+id/txtEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="EMail*"
+                            android:text=""
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                        <EditText
+                            android:id="@+id/txtMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Numero di telefono*"
+                            android:inputType="number"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+                            android:singleLine="true"
+                            android:text="" />
+
+                        <EditText
+                            android:id="@+id/txtPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Numero fisso"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:text="" />
+
+                        <EditText
+                            android:id="@+id/txtCodicePostale"
+                            android:singleLine="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Codice postale"
+                            android:text="" />
+
+                        <EditText
+                            android:id="@+id/txtPec"
+                            android:singleLine="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="PEC"
+                            android:text="" />
+
+                        <EditText
+                            android:id="@+id/txtProfessione"
+                            android:singleLine="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Professione"
+                            android:text="" />
+
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

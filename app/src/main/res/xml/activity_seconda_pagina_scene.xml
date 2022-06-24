@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/floatingActionButton3"
+            motion:layout_constraintTop_toTopOf="@+id/scvListaUtenti"
+            motion:layout_editor_absoluteY="111dp"
+            motion:layout_constraintEnd_toEndOf="@+id/scvListaUtenti"
+            android:layout_width="0dp"
+            android:layout_height="621dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:id="@+id/btnCarica"
+            android:layout_marginBottom="48dp"
+            motion:layout_constraintBottom_toTopOf="@+id/scvListaUtenti"
+            android:layout_marginTop="15dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.52"
+            motion:layout_constraintHorizontal_bias="0.95"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/btnRicarica" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            motion:layout_constraintBottom_toTopOf="@+id/scvListaUtenti"
+            motion:layout_constraintVertical_bias="0.52"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintHorizontal_bias="0.95"
+            android:layout_marginTop="15dp"
+            android:id="@+id/btnCarica"
+            motion:layout_constraintStart_toEndOf="@+id/btnRicarica" />
+        <Constraint
+            android:layout_height="64dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toTopOf="@+id/scvListaUtenti"
+            android:layout_width="114dp"
+            motion:layout_constraintStart_toEndOf="@+id/btnTorna"
+            android:id="@+id/btnRicarica"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_editor_absoluteX="266dp" />
+        <Constraint
+            motion:layout_constraintEnd_toStartOf="@+id/btnCarica"
+            android:layout_width="234dp"
+            android:layout_height="64dp"
+            motion:layout_constraintBottom_toTopOf="@+id/scvListaUtenti"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/btnTorna"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_editor_absoluteY="2dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp" />
+        <Constraint
+            android:id="@+id/btnCarica"
+            motion:layout_constraintEnd_toStartOf="@+id/btnCarica"
+            motion:layout_constraintStart_toEndOf="@+id/btnTorna"
+            motion:layout_editor_absoluteX="235dp"
+            motion:layout_constraintBottom_toTopOf="@+id/scvListaUtenti" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+    </ConstraintSet>
+</MotionScene>

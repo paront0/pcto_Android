@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RipristinaUtente"
+    android:background="@drawable/sfondo">
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtIdRipristino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="12dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/txtNomeRipristino"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtNomeRipristino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="18dp"
+                android:paddingHorizontal="12dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/btnIndietroRipristino"
+                app:layout_constraintEnd_toEndOf="@+id/txtIdRipristino"
+                app:layout_constraintStart_toStartOf="@+id/txtIdRipristino"
+                app:layout_constraintTop_toBottomOf="@+id/txtIdRipristino" />
+
+            <Button
+                android:id="@+id/btnIndietroRipristino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Indietro"
+                app:layout_constraintBottom_toTopOf="@+id/btnRipristinoP"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNomeRipristino" />
+
+            <Button
+                android:id="@+id/btnRipristinoP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="98dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="97dp"
+                android:layout_marginBottom="1dp"
+                android:text="Rispristina contatto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnIndietroRipristino" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/hsvNomiDati"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView4"
+        tools:layout_editor_absoluteX="130dp">
+
+        <LinearLayout
+            android:id="@+id/LlDefinizioneDatiUtente"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/hsvDati"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/hsvNomiDati"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hsvNomiDati"
+        app:layout_constraintTop_toTopOf="@+id/hsvNomiDati"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/LlDatiUtente"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

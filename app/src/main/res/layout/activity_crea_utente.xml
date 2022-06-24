@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sfondo"
+    tools:context=".CreaUtente">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="Creazione di un nuovo utente"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/swPrivato"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Switch
+                    android:id="@+id/swPrivato"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:minHeight="48dp"
+                    android:text="sei un privato?"
+                    app:layout_constraintEnd_toEndOf="@+id/btnIndietro2"
+                    app:layout_constraintStart_toStartOf="@+id/btnCreaUtente"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <Button
+                    android:id="@+id/btnCreaUtente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Crea utente"
+                    app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+                    app:layout_constraintEnd_toStartOf="@+id/btnIndietro2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/swPrivato" />
+
+                <Button
+                    android:id="@+id/btnIndietro2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sfondo_bottoni"
+                    android:text="indietro"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnCreaUtente"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnCreaUtente"
+                    app:layout_constraintTop_toTopOf="@+id/btnCreaUtente" />
+
+                <ScrollView
+                    android:id="@+id/scrollView2"
+                    android:layout_width="0dp"
+                    android:layout_height="227dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/swPrivato">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/nomeAzienda"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginTop="54dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/sfondo_edittext"
+                            android:hint="Nome"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="12dp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textColorHint="#c0c0c0" />
+
+                        <EditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/sfondo_edittext"
+                            android:hint="email"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="12dp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textColorHint="#c0c0c0" />
+
+                        <EditText
+                            android:id="@+id/password"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/sfondo_edittext"
+                            android:hint="password"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="12dp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textColorHint="#c0c0c0" />
+
+                        <EditText
+                            android:id="@+id/codiceFiscale"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginTop="54dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/sfondo_edittext"
+                            android:hint="Codice fiscale"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="12dp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textColorHint="#c0c0c0" />
+
+                        <EditText
+                            android:id="@+id/mobileNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginTop="54dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/sfondo_edittext"
+                            android:ems="10"
+                            android:hint="Telefono mobile"
+                            android:inputType="phone"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="12dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="#c0c0c0" />
+
+                        <EditText
+                            android:id="@+id/partitaIvaNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginTop="54dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/sfondo_edittext"
+                            android:ems="10"
+                            android:hint="Partita IVA"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="12dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="#c0c0c0" />
+
+                    </LinearLayout>
+                </ScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
